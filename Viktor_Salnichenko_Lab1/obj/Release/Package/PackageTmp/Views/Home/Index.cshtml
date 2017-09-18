@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Restaraunt Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <style>
+        .nav-wrapper {
+            font-family: "Open Sans Condensed", sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .nav-wrapper a {
+            width: 100%;
+            text-align: center;
+        }
+
+        nav {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper blue">
+                <a href="#" class="brand-logo">Order Food Right Now!</a>
+            </div>
+        </nav>
+        <div class="center-text">
+            <h2 class="center">Fill the from and order the food right now!!!</h2>
+        </div>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="disabled" type="text" class="validate">
+                        <label for="disabled">City</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Postal Code</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="disabled" type="text" class="validate">
+                        <label for="disabled">Phone Number</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select class="province_select">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Ontario</option>
+                            <option value="2">Quebec</option>
+                            <option value="3">Nova Scotia</option>
+                        </select>
+                        <label>Province</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <select multiple>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Coca Cola</option>
+                            <option value="2">Sprite</option>
+                            <option value="3">Pepsi</option>
+                            <option value="3">Potatoes</option>
+                            <option value="3">Carrot</option>
+                            <option value="3">Porridge</option>
+                        </select>
+                        <label>Food and Drinks</label>
+                    </div>
+                    <div class="col s6">
+                        <p class="col s6">
+                            <input class="with-gap" name="group1" type="radio" id="pickup" />
+                            <label for="pickup">Pickup</label>
+                        </p>
+                        <p class="col s6">
+                            <input class="with-gap" name="group1" type="radio" id="delivery" />
+                            <label for="delivery">Delivery</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Order Comments</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col s3">
+                        <button class="btn" id="submit_order">Submit Order</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+
+        $("#submit_order").on("click", function (e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

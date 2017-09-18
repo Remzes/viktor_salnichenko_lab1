@@ -1,0 +1,14 @@
+﻿.nav-wrapper {
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+    .nav-wrapper a {
+        width: 100%;
+        text-align: center;
+    }
+
+nav {
+    margin-bottom: 30px;
+}
+body {
+}
